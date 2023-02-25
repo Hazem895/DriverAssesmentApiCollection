@@ -1,0 +1,131 @@
+{
+	"info": {
+		"_postman_id": "7aa851c1-0adb-4c39-9fe1-cdc4e0b26faa",
+		"name": "DriversCollection",
+		"description": "# Overview\n\nCollection for basic CRUD operations for drivers",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17576406"
+	},
+	"item": [
+		{
+			"name": "CreateRequest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"driverId\": \"3fa85f64-5717-4562-b3fc-2c963f66afa3\",\n    \"firstname\": \"Samy\",\n    \"lastname\": \"Atla\",\n    \"email\": \"sAtla@test.com\",\n    \"phoneNumber\": \"+2012\"}"
+				},
+				"url": {
+					"raw": "{{ApiUrl}}",
+					"host": [
+						"{{ApiUrl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadRequest",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain"
+					}
+				],
+				"url": {
+					"raw": "{{ApiUrl}}",
+					"host": [
+						"{{ApiUrl}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ReadByIdRequest",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "accept",
+						"value": "text/plain"
+					}
+				],
+				"url": {
+					"raw": "{{ApiUrl}}/",
+					"host": [
+						"{{ApiUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateRequest",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"firstname\": \"Hazim\",\n    \"lastname\": \"Attia\",\n    \"email\": \"hAttia@test.com\",\n    \"phoneNumber\": \"+050\"\n}"
+				},
+				"url": {
+					"raw": "{{ApiUrl}}/3fa85f64-5717-4562-b3fc-2c963f66afa1",
+					"host": [
+						"{{ApiUrl}}"
+					],
+					"path": [
+						"3fa85f64-5717-4562-b3fc-2c963f66afa1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteRequest",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "accept",
+						"value": "*/*"
+					}
+				],
+				"url": {
+					"raw": "{{ApiUrl}}/",
+					"host": [
+						"{{ApiUrl}}"
+					],
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
